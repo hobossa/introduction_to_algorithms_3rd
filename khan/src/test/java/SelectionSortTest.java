@@ -6,7 +6,7 @@ import java.util.Random;
 
 class SelectionSortTest {
     @Test
-    void search() {
+    void sort() {
         Integer[] array = new Integer[10];
         Random random = new Random();
         for (int i = 0; i < 10; i++) {
