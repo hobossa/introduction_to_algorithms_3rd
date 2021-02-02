@@ -4,7 +4,7 @@ public class SelectionSort {
     public static <T> void sort(T[] array, Comparator<T> comp) {
         for (int i = 0; i < array.length; i++) {
             int n = indexOfMiniItem(array, i, comp);
-            swap(array, i, n);
+            Util.swap(array, i, n);
         }
     }
 
@@ -16,11 +16,5 @@ public class SelectionSort {
             }
         }
         return n;
-    }
-
-    private static <T> void swap(T[] array, int m, int n) {
-        T temp = array[m];
-        array[m] = array[n];
-        array[n] = temp;
     }
 }
