@@ -10,7 +10,7 @@ public class InsertionSort {
     private static <T> void insert(T[] array, int rightIndex, T value, Comparator<T> comp) {
         int i;
         for (i = rightIndex;
-             i >= 0 & comp.compare(value, array[i]) < 0;
+             i >= 0 && comp.compare(value, array[i]) < 0;
              i--) {
             array[i+1] = array[i];
         }

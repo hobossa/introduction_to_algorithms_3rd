@@ -6,14 +6,15 @@ class BinarySearchTest {
 
     @Test
     void search() {
-        Integer[] array = new Integer[10];
-        for (int i = 0; i < 10; i++) {
+        final int n = 10;
+        Integer[] array = new Integer[n];
+        for (int i = 0; i < n; i++) {
             array[i] = i;
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < n; i++) {
             assertEquals(i, BinarySearch.search(array, i, new DefaultComparator<Integer>()));
         }
         assertEquals(-1, BinarySearch.search(array, -1, new DefaultComparator<Integer>()));
-        assertEquals(-1, BinarySearch.search(array, 10, new DefaultComparator<Integer>()));
+        assertEquals(-1, BinarySearch.search(array, n, new DefaultComparator<Integer>()));
     }
 }

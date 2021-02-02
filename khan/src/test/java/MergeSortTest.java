@@ -9,15 +9,16 @@ class MergeSortTest {
 
     @Test
     void sort() {
-        Integer[] array = new Integer[10];
+        final int n = 10;
+        Integer[] array = new Integer[n];
         Random random = new Random();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < n; i++) {
             array[i] = random.nextInt(100);
         }
         Comparator<Integer> comp = new DefaultComparator<Integer>();
         MergeSort.sort(array, comp);
-        for (int i = 0; i < 9; i++) {
-            int c = comp.compare(array[i], array[i+1]);
+        for (int i = 0; i < n - 1; i++) {
+            int c = comp.compare(array[i], array[i + 1]);
             assertTrue(c <= 0);
         }
     }

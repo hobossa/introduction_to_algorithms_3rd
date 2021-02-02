@@ -9,7 +9,7 @@ public class MergeSort {
             low[i] = array[p + i];
         }
         for (int i = 0; i < high.length; i++) {
-            high[i] = array[p + 1 + i];
+            high[i] = array[q + 1 + i];
         }
 
         int k = p;
